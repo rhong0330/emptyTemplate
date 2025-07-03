@@ -1,0 +1,30 @@
+package com.prep.fourtytwodot.prep
+
+import android.os.Bundle
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.runtime.Composable
+import com.prep.fourtytwodot.prep.presentation.ui.UserScreen
+import dagger.hilt.android.AndroidEntryPoint
+
+@AndroidEntryPoint
+class MainActivity : ComponentActivity () {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContent{
+            AppContent()
+        }
+
+    }
+}
+
+@Composable
+fun AppContent() {
+    MaterialTheme {
+        Surface {
+            UserScreen()
+        }
+    }
+}

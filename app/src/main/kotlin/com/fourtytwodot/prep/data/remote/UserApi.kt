@@ -1,0 +1,11 @@
+package com.fourtytwodot.prep.data.remote
+
+import com.fourtytwodot.prep.data.model.User
+import retrofit2.Response
+import retrofit2.http.GET
+import javax.inject.Inject
+
+interface UserApi {
+    @GET("users")
+    suspend fun getUsers(): Response<List<User>>
+}
